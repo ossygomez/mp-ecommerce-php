@@ -1,13 +1,13 @@
 <?php
 // SDK de Mercado Pago
-require_once 'vendor/autoload.php';
-
+require __DIR__ .  '/vendor/autoload.php';
+MercadoPago\SDK::setAccessToken('TEST-2547629154754710-100900-4ea8150c6f771c3fed765d87c360c393-276473163');
 //Dominio del proyecto
 $domain = 'https://ossygomez-mp-ecommerce-php.herokuapp.com';
 
 if( isset($_POST['title']) ) {
 // Agregar credenciales
-//MercadoPago\SDK::setAccessToken('APP_USR-2547629154754710-100900-d4e9f0a1c78e6d0e3e5f624ae636f105-276473163');
+//
 
 $payer = new MercadoPago\Payer();
 $payer->name = "Lalo";
