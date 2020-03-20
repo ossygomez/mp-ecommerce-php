@@ -1,6 +1,6 @@
 <?php
 // SDK de Mercado Pago
-require_once '/vendor/autoload.php';
+require_once 'vendor/autoload.php';
 
 //Dominio del proyecto
 $domain = 'https://ossygomez-mp-ecommerce-php.herokuapp.com';
