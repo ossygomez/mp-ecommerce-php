@@ -12,8 +12,8 @@ MercadoPago\SDK::setAccessToken('APP_USR-2547629154754710-100900-d4e9f0a1c78e6d0
 $payer = new MercadoPago\Payer();
 $payer->name = "Lalo";
 $payer->surname = "Landa";
-$payer->email = "";
-$payer->date_created = "";
+$payer->email = "test_user_88717311@testuser.com";
+$payer->date_created = "2020-03-20 00:37:22-03:00";
 $payer->phone = array(
   "area_code" => "011",
   "number" => "2222-3333"
@@ -24,7 +24,7 @@ $payer->identification = array(
 );
 $payer->address = array(
   "street_name" => "Falsa",
-  "street_number" => 1012304,
+  "street_number" => "123",
   "zip_code" => "1111"
 );
 
