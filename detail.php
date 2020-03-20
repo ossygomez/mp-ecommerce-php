@@ -4,14 +4,12 @@ $domain = 'https://ossygomez-mp-ecommerce-php.herokuapp.com';
 
 // SDK de Mercado Pago
 require_once 'vendor/autoload.php';
-// Agregar credenciales
-MercadoPago\SDK::setAccessToken('TEST-2547629154754710-100900-4ea8150c6f771c3fed765d87c360c393-276473163');
+    MercadoPago\SDK::setAccessToken('TEST-2547629154754710-100900-4ea8150c6f771c3fed765d87c360c393-276473163');
+    $preference = new MercadoPago\Preference();
+    $payer = new MercadoPago\Payer();
+    $item = new MercadoPago\Item();
 
-if( isset($_POST['title']) ) {
 
-
-$payer = new MercadoPago\Payer();
-$payer->name = "Lalo";
 $payer->surname = "Landa";
 $payer->email = "test_user_88717311@testuser.com";
 $payer->date_created = "2020-03-20 00:37:22-03:00";
@@ -30,10 +28,10 @@ $payer->address = array(
 );
 
 // Crea un objeto de preferencia
-$preference = new MercadoPago\Preference();
+
 
 // Crea un ítem en la preferencia
-$item = new MercadoPago\Item();
+
 $item->id           = '1234';
 $item->title        = $_POST['title'];
 $item->description  = 'Dispositivo móvil de Tienda e-commerce';
@@ -68,7 +66,6 @@ $preference->notification_url = $domain . "/aviso.php";
 // $preference->auto_return = "approved";
 $preference->auto_return = "all";
 $preference->save();
-}
 ?>
 <!DOCTYPE html>
 <html class="supports-animation supports-columns svg no-touch no-ie no-oldie no-ios supports-backdrop-filter as-mouseuser" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
