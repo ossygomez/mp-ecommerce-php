@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 //Dominio del proyecto
 $domain = 'https://ossygomez-mp-ecommerce-php.herokuapp.com';
@@ -67,7 +68,7 @@ $preference->notification_url = $domain . "/aviso.php";
 $preference->auto_return = "all";
 $preference->save();
 ?>
-<!DOCTYPE html>
+
 <html class="supports-animation supports-columns svg no-touch no-ie no-oldie no-ios supports-backdrop-filter as-mouseuser" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=1024">
