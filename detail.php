@@ -1,13 +1,14 @@
 <?php
-// SDK de Mercado Pago
-require __DIR__.'/vendor/autoload.php';
-MercadoPago\SDK::setAccessToken('TEST-2547629154754710-100900-4ea8150c6f771c3fed765d87c360c393-276473163');
 //Dominio del proyecto
 $domain = 'https://ossygomez-mp-ecommerce-php.herokuapp.com';
 
-if( isset($_POST['title']) ) {
+// SDK de Mercado Pago
+require __DIR__.'/vendor/autoload.php';
 // Agregar credenciales
-//
+MercadoPago\SDK::setAccessToken('TEST-2547629154754710-100900-4ea8150c6f771c3fed765d87c360c393-276473163');
+
+if( isset($_POST['title']) ) {
+
 
 $payer = new MercadoPago\Payer();
 $payer->name = "Lalo";
@@ -203,8 +204,7 @@ $preference->save();
                                     </div>
                                     <!-- button type="submit" class="mercadopago-button" formmethod="post">Pagar</button -->
                                   <form>
-                                        <script src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js" data-preference-id="<?php echo $preference->id; ?>" data-header-color="#2D3277" data-elements-color="#2D3277"
-                                        data-button-label="Pagar la compra"></script>
+                                        <script src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js" data-preference-id="<?php echo $preference->id; ?>" data-header-color="#2D3277" data-elements-color="#2D3277" data-button-label="Pagar la compra"></script>
                                     </form>
                                 </div>
                             </div>
