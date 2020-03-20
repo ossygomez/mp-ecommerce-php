@@ -1,3 +1,74 @@
+<?php
+// SDK de Mercado Pago
+require __DIR__ .  '/vendor/autoload.php';
+
+//Dominio del proyecto
+$domain = 'https://ossygomez-mp-ecommerce-php.herokuapp.com';
+
+if( isset($_POST['title']) ) {
+// Agregar credenciales
+MercadoPago\SDK::setAccessToken('APP_USR-2547629154754710-100900-d4e9f0a1c78e6d0e3e5f624ae636f105-276473163');
+
+$payer = new MercadoPago\Payer();
+$payer->name = "Lalo";
+$payer->surname = "Landa";
+$payer->email = "";
+$payer->date_created = "";
+$payer->phone = array(
+  "area_code" => "011",
+  "number" => "2222-3333"
+);
+$payer->identification = array(
+  "type" => "DNI",
+  "number" => "22.333.444"
+);
+$payer->address = array(
+  "street_name" => "Falsa",
+  "street_number" => 1012304,
+  "zip_code" => "1111"
+);
+
+// Crea un objeto de preferencia
+$preference = new MercadoPago\Preference();
+
+// Crea un ítem en la preferencia
+$item = new MercadoPago\Item();
+$item->id           = '1234';
+$item->title        = $_POST['title'];
+$item->description  = 'Dispositivo móvil de Tienda e-commerce';
+$item->picture_url  = $_POST['img'];
+$item->quantity     = $_POST['unit'];
+$item->unit_price   = $_POST['price'];
+$item->currency_id  = "ARS";
+
+$preference->items = [$item];
+
+$preference->payer = $payer;
+$preference->external_reference = 'ABCD1234';
+
+//Exclusiones de pago y cuotas
+$preference->payment_methods = [
+    "excluded_payment_methods" => [
+        ["id" => "amex"]
+    ],
+    "excluded_payment_types" => [
+        ["id" => "atm"]
+    ],
+    "installments" => 6
+];
+
+$preference->back_urls = [
+    "success" => $domain . "/gracias.php?mp_status=success",
+    "failure" => $domain . "/gracias.php?mp_status=failure",
+    "pending" => $domain . "/gracias.php?mp_status=pending"
+];
+$preference->notification_url = $domain . "/aviso.php";
+
+// $preference->auto_return = "approved";
+$preference->auto_return = "all";
+$preference->save();
+}
+?>
 <!DOCTYPE html>
 <html class="supports-animation supports-columns svg no-touch no-ie no-oldie no-ios supports-backdrop-filter as-mouseuser" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
