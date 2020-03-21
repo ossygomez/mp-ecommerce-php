@@ -24,8 +24,9 @@ $preference->items = [$item];
 
 //Nuevo comprador
 $payer = new MercadoPago\Payer();
+$payer->name = "Lalo";
 $payer->surname = "Landa";
-$payer->email = "test_user_88717311@testuser.com";
+$payer->email = "test_user_40910335@testuser.com";
 $payer->date_created = "2020-03-20 00:37:22-03:00";
 $payer->phone = array(
   "area_code" => "011",
