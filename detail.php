@@ -22,11 +22,20 @@ $item->currency_id  = "ARS";
 
 $preference->items = [$item];
 
+//Nuevo cliente
+$client = new MercadoPago\Client ();
+$client->id = "469485398";
+$client->password = "qatest7903";
+$client->email = "test_user_97555375@testuser.com";
+$client->PUBLIC_KEY = "APP_USR-a83913d5-e583-4556-8c19-d2773746b430";
+$client->ACCESS_TOKEN = "APP_USR-6317427424180639-090914-5c508e1b02a34fcce879a999574cf5c9-469485398";
 //Nuevo comprador
 $payer = new MercadoPago\Payer();
+$payer->id = "471923173";
 $payer->name = "Lalo";
 $payer->surname = "Landa";
-$payer->email = "test_user_40910335@testuser.com";
+$payer->email = "test_user_63274575@testuser.com";
+$payer->password = "qatest2417";
 $payer->date_created = "2020-03-20 00:37:22-03:00";
 $payer->phone = array(
   "area_code" => "011",
@@ -59,9 +68,9 @@ $preference->payment_methods = [
 ];
 
 $preference->back_urls = [
-    "success" => $domain . "/gracias.php?mp_status=success",
-    "failure" => $domain . "/gracias.php?mp_status=failure",
-    "pending" => $domain . "/gracias.php?mp_status=pending"
+    "success" => $domain . "/congrats.php?mp_status=success",
+    "failure" => $domain . "/congrats.php?mp_status=failure",
+    "pending" => $domain . "/congrats.php?mp_status=pending"
 ];
 $preference->notification_url = $domain . "/aviso.php";
 
