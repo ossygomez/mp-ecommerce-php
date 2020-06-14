@@ -72,9 +72,9 @@ $preference->payment_methods = [
 ];
 
 $preference->back_urls = [
-    "success" => $domain . "/congrats.php?mp_status=success",
-    "failure" => $domain . "/congrats.php?mp_status=failure",
-    "pending" => $domain . "/congrats.php?mp_status=pending"
+    "success" => $domain . "/gracias.php?mp_status=success",
+    "failure" => $domain . "/gracias.php?mp_status=failure",
+    "pending" => $domain . "/gracias.php?mp_status=pending"
 ];
 $preference->notification_url = $domain . "/aviso.php";
 
