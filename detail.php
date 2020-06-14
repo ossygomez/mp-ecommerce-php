@@ -31,6 +31,8 @@ $client->email = "test_user_97555375@testuser.com";
 $client->PUBLIC_KEY = "APP_USR-a83913d5-e583-4556-8c19-d2773746b430";
 $client->ACCESS_TOKEN = "APP_USR-6317427424180639-090914-5c508e1b02a34fcce879a999574cf5c9-469485398";
 
+$preference->client = $client;
+
 //Nuevo comprador
 $payer = new MercadoPago\Payer();
 $payer->id = "471923173";
@@ -55,7 +57,7 @@ $payer->address = array(
 
 
 
-$preference->payment = $payment;
+$preference->payer = $payer;
 $preference->external_reference = 'ABCD1234';
 
 //Exclusiones de pago y cuotas
