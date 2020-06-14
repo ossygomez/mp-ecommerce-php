@@ -4,9 +4,9 @@ $domain = 'https://ossygomez-mp-ecommerce-php.herokuapp.com';
 
 // SDK de Mercado Pago
 require_once ('vendor/autoload.php');
-//MercadoPago\SDK::setAccessToken('APP_USR-2547629154754710-100900-d4e9f0a1c78e6d0e3e5f624ae636f105-276473163');
-MercadoPago\SDK::setAccessToken('APP_USR-6317427424180639-090914-5c508e1b02a34fcce879a999574cf5c9-469485398');
-    
+MercadoPago\SDK::setAccessToken('TEST-2547629154754710-100900-4ea8150c6f771c3fed765d87c360c393-276473163');
+//MercadoPago\SDK::setAccessToken('APP_USR-6317427424180639-090914-5c508e1b02a34fcce879a999574cf5c9-469485398');
+
 
 // Crea un objeto de preferencia
 $preference = new MercadoPago\Preference();
@@ -23,31 +23,31 @@ $item->currency_id  = "ARS";
 
 $preference->items = [$item];
 
-/*Nuevo cliente
+Nuevo cliente
 $client = new MercadoPago\Client ();
-$preference->client_id = "469485398";
-$preference->password = "qatest7903";
-$preference->email = "test_user_97555375@testuser.com";
-$preference->PUBLIC_KEY = "APP_USR-a83913d5-e583-4556-8c19-d2773746b430";
-$preference->ACCESS_TOKEN = "APP_USR-6317427424180639-090914-5c508e1b02a34fcce879a999574cf5c9-469485398"; */
+$preference->client_id = "2547629154754710";
+$preference->password = "M4gu4n4**";
+$preference->email = "oswaldogomezs@growthost.com";
+$preference->PUBLIC_KEY = "TEST-a7f70851-a269-4bd7-9e91-0e9f0084c319";
+$preference->ACCESS_TOKEN = "TEST-2547629154754710-100900-4ea8150c6f771c3fed765d87c360c393-276473163";
 
 //Nuevo comprador
-$payer = new MercadoPago\Payer();
-$payer->id = "471923173";
-$payer->name = "Lalo";
-$payer->surname = "Landa";
-$payer->email = "test_user_63274575@testuser.com";
-$payer->password = "qatest2417";
-$payer->date_created = "2020-03-20 00:37:22-03:00";
-$payer->phone = array(
+$payment = new MercadoPago\Payment();
+$payment->id = "471923173";
+$payment->name = "Lalo";
+$payment->surname = "Landa";
+$payment->email = "test_user_63274575@testuser.com";
+$payment->password = "qatest2417";
+$payment->date_created = "2020-03-20 00:37:22-03:00";
+$payment->phone = array(
   "area_code" => "011",
   "number" => "2222-3333"
 );
-$payer->identification = array(
+$payment->identification = array(
   "type" => "DNI",
   "number" => "22.333.444"
 );
-$payer->address = array(
+$payment->address = array(
   "street_name" => "Falsa",
   "street_number" => "123",
   "zip_code" => "1111"
@@ -55,7 +55,7 @@ $payer->address = array(
 
 
 
-$preference->payer = $payer;
+$preference->payment = $payment;
 $preference->external_reference = 'ABCD1234';
 
 //Exclusiones de pago y cuotas
@@ -82,7 +82,7 @@ $preference->save();
 ?>
 <!DOCTYPE html>
 <html class="supports-animation supports-columns svg no-touch no-ie no-oldie no-ios supports-backdrop-filter as-mouseuser" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+
     <meta name="viewport" content="width=1024">
     <title>Tienda e-commerce</title>
 
@@ -126,7 +126,7 @@ $preference->save();
 <body class="as-theme-light-heroimage">
 
     <div class="stack">
-        
+
         <div class="as-search-wrapper" role="main">
             <div class="as-navtuck-wrapper">
                 <div class="as-l-fullwidth  as-navtuck" data-events="event52">
@@ -176,7 +176,7 @@ $preference->save();
                                         <img src="./assets/wireless-headphones" class="ir ir item-image as-producttile-image  " style="max-width: 70%;max-height: 70%;"alt="" width="445" height="445">
                                     </div>
                                     <div class="images mini-gallery gal5 ">
-                                    
+
 
                                         <div class="as-isdesktop with-paddlenav with-paddlenav-onhover">
                                             <div class="clearfix image-list xs-no-js as-util-relatedlink relatedlink" data-relatedlink="6|Powerbeats3 Wireless Earphones - Neighborhood Collection - Brick Red|MPXP2">
@@ -184,13 +184,13 @@ $preference->save();
                                                     <div class=""></div>
                                                     <img src="./assets/003.jpg" class="ir ir item-image as-producttile-image" alt="" width="445" height="445" style="content:-webkit-image-set(url(<?php echo $_POST['img'] ?>) 2x);">
                                                 </div>
-                                                
+
                                             </div>
 
-                                            
+
                                         </div>
 
-                                        
+
 
                                     </div>
 
