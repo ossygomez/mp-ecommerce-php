@@ -4,7 +4,7 @@ $domain = 'https://ossygomez-mp-ecommerce-php.herokuapp.com';
 
 // SDK de Mercado Pago
 require_once ('vendor/autoload.php');
-MercadoPago\SDK::setAccessToken('TEST-2547629154754710-100900-4ea8150c6f771c3fed765d87c360c393-276473163');
+MercadoPago\SDK::setAccessToken('APP_USR-2547629154754710-100900-d4e9f0a1c78e6d0e3e5f624ae636f105-276473163');
 // MercadoPago\SDK::setAccessToken('APP_USR-6317427424180639-090914-5c508e1b02a34fcce879a999574cf5c9-469485398');
 
 
