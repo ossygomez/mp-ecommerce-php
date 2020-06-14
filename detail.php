@@ -25,11 +25,11 @@ $preference->items = [$item];
 
 Nuevo cliente
 $client = new MercadoPago\Client ();
-$preference->client_id = "2547629154754710";
-$preference->password = "M4gu4n4**";
-$preference->email = "oswaldogomezs@growthost.com";
-$preference->PUBLIC_KEY = "TEST-a7f70851-a269-4bd7-9e91-0e9f0084c319";
-$preference->ACCESS_TOKEN = "TEST-2547629154754710-100900-4ea8150c6f771c3fed765d87c360c393-276473163";
+$preference->client_id = "469485398";
+$preference->password = "qatest7903";
+$preference->email = "test_user_97555375@testuser.com";
+$preference->PUBLIC_KEY = "APP_USR-a83913d5-e583-4556-8c19-d2773746b430";
+$preference->ACCESS_TOKEN = "APP_USR-6317427424180639-090914-5c508e1b02a34fcce879a999574cf5c9-469485398";
 
 //Nuevo comprador
 $payment = new MercadoPago\Payment();

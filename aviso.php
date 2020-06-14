@@ -38,5 +38,4 @@
     } else {
         print_r("Todavía no ha sido pagado. No despache el artículo.");
     }
-
 ?>
