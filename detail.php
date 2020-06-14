@@ -24,7 +24,7 @@ $item->currency_id  = "ARS";
 $preference->items = [$item];
 
 Nuevo cliente
-$client = new MercadoPago\Client ();
+$client = new MercadoPago\Client();
 $preference->client_id = "469485398";
 $preference->password = "qatest7903";
 $preference->email = "test_user_97555375@testuser.com";
