@@ -32,22 +32,22 @@ $preference->PUBLIC_KEY = "APP_USR-a83913d5-e583-4556-8c19-d2773746b430";
 $preference->ACCESS_TOKEN = "APP_USR-6317427424180639-090914-5c508e1b02a34fcce879a999574cf5c9-469485398";
 
 //Nuevo comprador
-$payment = new MercadoPago\Payment();
-$payment->id = "471923173";
-$payment->name = "Lalo";
-$payment->surname = "Landa";
-$payment->email = "test_user_63274575@testuser.com";
-$payment->password = "qatest2417";
-$payment->date_created = "2020-03-20 00:37:22-03:00";
-$payment->phone = array(
+$payer = new MercadoPago\Payment();
+$payer->id = "471923173";
+$payer->name = "Lalo";
+$payer->surname = "Landa";
+$payer->email = "test_user_63274575@testuser.com";
+$payer->password = "qatest2417";
+$payer->date_created = "2020-03-20 00:37:22-03:00";
+$payer->phone = array(
   "area_code" => "011",
   "number" => "2222-3333"
 );
-$payment->identification = array(
+$payer->identification = array(
   "type" => "DNI",
   "number" => "22.333.444"
 );
-$payment->address = array(
+$payer->address = array(
   "street_name" => "Falsa",
   "street_number" => "123",
   "zip_code" => "1111"
