@@ -24,14 +24,14 @@ $item->currency_id  = "ARS";
 $preference->items = [$item];
 
 // Nuevo cliente
-$client = new MercadoPago\Customer();
-$client->client_id = "469485398";
-$client->password = "qatest7903";
-$client->email = "test_user_97555375@testuser.com";
-$client->PUBLIC_KEY = "APP_USR-a83913d5-e583-4556-8c19-d2773746b430";
-$client->ACCESS_TOKEN = "APP_USR-6317427424180639-090914-5c508e1b02a34fcce879a999574cf5c9-469485398";
+$customer = new MercadoPago\Customer();
+$customer->customer_id = "469485398";
+$customer->password = "qatest7903";
+$customer->email = "test_user_97555375@testuser.com";
+$customer->PUBLIC_KEY = "APP_USR-a83913d5-e583-4556-8c19-d2773746b430";
+$customer->ACCESS_TOKEN = "APP_USR-6317427424180639-090914-5c508e1b02a34fcce879a999574cf5c9-469485398";
 
-$preference->client = $client;
+$preference->customer = $customer;
 
 //Nuevo comprador
 $payer = new MercadoPago\Payer();
