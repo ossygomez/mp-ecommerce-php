@@ -1,6 +1,7 @@
 <?php
-    MercadoPago\SDK::setAccessToken("TEST-2547629154754710-100900-4ea8150c6f771c3fed765d87c360c393-276473163");
-
+    // MercadoPago\SDK::setAccessToken("TEST-2547629154754710-100900-4ea8150c6f771c3fed765d87c360c393-276473163");
+    MercadoPago\SDK::setAccessToken('APP_USR-6317427424180639-090914-5c508e1b02a34fcce879a999574cf5c9-469485398');
+    
     $merchant_order = null;
 
     switch($_GET["topic"]) {
