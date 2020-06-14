@@ -4,8 +4,8 @@ $domain = 'https://ossygomez-mp-ecommerce-php.herokuapp.com';
 
 // SDK de Mercado Pago
 require_once ('vendor/autoload.php');
-// MercadoPago\SDK::setAccessToken('TEST-2547629154754710-100900-4ea8150c6f771c3fed765d87c360c393-276473163');
-MercadoPago\SDK::setAccessToken('APP_USR-6317427424180639-090914-5c508e1b02a34fcce879a999574cf5c9-469485398');
+MercadoPago\SDK::setAccessToken('TEST-2547629154754710-100900-4ea8150c6f771c3fed765d87c360c393-276473163');
+// MercadoPago\SDK::setAccessToken('APP_USR-6317427424180639-090914-5c508e1b02a34fcce879a999574cf5c9-469485398');
 
 
 // Crea un objeto de preferencia
@@ -24,12 +24,13 @@ $item->currency_id  = "ARS";
 $preference->items = [$item];
 
 // Nuevo cliente
-// $customer = new MercadoPago\Customer();
-// $customer->customer_id = "469485398";
-// $customer->password = "qatest7903";
-// $customer->email = "test_user_97555375@testuser.com";
-// $customer->PUBLIC_KEY = "APP_USR-a83913d5-e583-4556-8c19-d2773746b430";
-// $customer->ACCESS_TOKEN = "APP_USR-6317427424180639-090914-5c508e1b02a34fcce879a999574cf5c9-469485398";
+$customer = new MercadoPago\Customer();
+$customer->customer_id = "584584367";
+$customer->nickname = "TESTBKE83VQR"
+$customer->password = "qatest9955";
+$customer->email = "test_user_86008204@testuser.com";
+$customer->PUBLIC_KEY = "TEST-a7f70851-a269-4bd7-9e91-0e9f0084c319";
+$customer->ACCESS_TOKEN = "TEST-2547629154754710-100900-4ea8150c6f771c3fed765d87c360c393-276473163";
 
 $preference->customer = $customer;
 
