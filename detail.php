@@ -32,7 +32,7 @@ $preference->PUBLIC_KEY = "APP_USR-a83913d5-e583-4556-8c19-d2773746b430";
 $preference->ACCESS_TOKEN = "APP_USR-6317427424180639-090914-5c508e1b02a34fcce879a999574cf5c9-469485398";
 
 //Nuevo comprador
-$payer = new MercadoPago\Payment();
+$payer = new MercadoPago\Payer();
 $payer->id = "471923173";
 $payer->name = "Lalo";
 $payer->surname = "Landa";
