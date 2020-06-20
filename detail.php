@@ -172,6 +172,10 @@ $preference->save();
                             </div>
                         </div>
                         <div class="as-accessories-results  as-search-desktop">
+                            <?php require __DIR__ . '/mp_response.php'; ?>
+
+                            <?php if( isset($_POST['title']) ) { ?>
+
                             <div class="width:60%">
                                 <div class="as-producttile-tilehero with-paddlenav " style="float:left;">
                                     <div class="as-dummy-container as-dummy-img">
@@ -179,7 +183,7 @@ $preference->save();
                                         <img src="./assets/wireless-headphones" class="ir ir item-image as-producttile-image  " style="max-width: 70%;max-height: 70%;"alt="" width="445" height="445">
                                     </div>
                                     <div class="images mini-gallery gal5 ">
-
+                                    
 
                                         <div class="as-isdesktop with-paddlenav with-paddlenav-onhover">
                                             <div class="clearfix image-list xs-no-js as-util-relatedlink relatedlink" data-relatedlink="6|Powerbeats3 Wireless Earphones - Neighborhood Collection - Brick Red|MPXP2">
@@ -187,13 +191,13 @@ $preference->save();
                                                     <div class=""></div>
                                                     <img src="./assets/003.jpg" class="ir ir item-image as-producttile-image" alt="" width="445" height="445" style="content:-webkit-image-set(url(<?php echo $_POST['img'] ?>) 2x);">
                                                 </div>
-
+                                                
                                             </div>
 
-
+                                            
                                         </div>
 
-
+                                        
 
                                     </div>
 
@@ -209,18 +213,21 @@ $preference->save();
                                             </h3>
                                         </div>
                                         <h3 >
-                                            <?php echo $_POST['price'] ?>
+                                            <?php echo $_POST['unit'] ?>
                                         </h3>
                                         <h3 >
-                                            <?php echo "$" . $_POST['unit'] ?>
+                                            <?php echo "$" . $_POST['price'] ?>
                                         </h3>
                                     </div>
-                                    <!-- button type="submit" class="mercadopago-button" formmethod="post">Pagar</button -->
-                                  <form>
-                                        <script src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js" data-preference-id="<?php echo $preference->id; ?>" data-header-color="#2D3277" data-elements-color="#2D3277" data-button-label="Pagar la compra"></script>
+                                    <!-- <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button> -->
+                                    <!-- <form action="/congrats.php" method="POST"> -->
+                                    <form>
+                                        <script src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js" data-preference-id="<?php echo $preference->id; ?>" data-header-color="#2D3277" data-elements-color="#2D3277"
+                                        data-button-label="Pagar la compra"></script>
                                     </form>
                                 </div>
                             </div>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
